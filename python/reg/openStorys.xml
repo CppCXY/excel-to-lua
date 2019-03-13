@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	
+<workBook name="story" from="J剧情开场.xlsx"  >
+<sheet name="main"  to="openStorys.lua" >
+	<variable name="name" fromCol="剧本名" type="string" />
+	<StringParse name="action" fromCol="内容" splitSequence="\n*" type="collection" >
+		<variable name="type" fromIndex="0" type="string" />
+		<variable name="value" fromIndex="1" type="blockString" />
+	</StringParse>
+	<extend name="result" fromIndex="1" endIndex="12" type="collection" >
+		<variable name="ret"  fromCol="跳转[index]结果" type="string" />
+		<variable name="type" fromCol="跳转[index]类型" type="string" />
+		<variable name="value" fromCol="跳转[index]值" type="string" />
+		<StringParse name="condition" fromCol="跳转[index]条件" type="collection" splitSequence="\n:">
+			<variable name="type" fromIndex="0" type="string" />
+			<variable name="value" fromIndex="1" type="string" />
+		</StringParse>
+	</extend>
+	<startParseCurrentSheet />
+	</sheet>
+	<endCurrentExcel />
+</workBook>
+	
+
+	
+	

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workBook name="map" from="D地图.xlsx"  >
+  <sheet name="地图" to="map.lua">
+    <variable name="id" fromCol="地图ID" type="int" />
+    <variable name="name" fromCol="地图名" type="string" />
+    <variable name="pic" fromCol="背景图" type="string" />
+    <variable name="desc" fromCol="描述" type="blockString" />
+    <variable name="musicEffect" fromCol="音效" type="string" />
+	<StringList name="musics" fromCol="音乐列表" splitSequence="#" keyName="name" type="string" />
+      <startParseCurrentSheet />
+    </sheet >
+  <sheet name="地图事件" to="mapEvent.lua">
+    <variable name="belongMap" fromCol="所属地图" type="string" />
+    <variable name="name" fromCol="名称" type="string" />
+    <variable name="x" fromCol="X" type="int" />
+    <variable name="y" fromCol="Y" type="int" />
+    <variable name="pic" fromCol="缩略图" type="string" />
+    <variable name="description" fromCol="描述" type="string" />
+    <extend type="collection" fromIndex="1" endIndex="20" name="event">
+      <variable name="type"  fromCol="事件[index]类型" type="string" />
+      <variable name="value" fromCol="事件[index]值" type="string" />
+      <variable name="image" fromCol="事件[index]缩略图" type="string" />
+      <variable name="description" fromCol="事件[index]描述" type="string" />
+      <variable name="repeatTimes" fromCol="事件[index]不能重复" type="string" />
+      <variable name="probability" fromCol="事件[index]概率" type="int" />
+      <StringParse name="condition"  type="collection" fromCol="事件[index]条件" splitSequence="\n:">
+        <variable name="type" fromIndex="0" type="string" />
+        <variable name="value" fromIndex="1" type="string" />
+      </StringParse>
+    </extend>
+    <startParseCurrentSheet />
+  </sheet >
+  <endCurrentExcel />
+</workBook>
+
+
+
+

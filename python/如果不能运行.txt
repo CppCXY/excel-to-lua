@@ -1,0 +1,9 @@
+//python 版本3.x(开发时版本3.7.1)
+请在cmd下输入
+pip install xlrd
+并在cmd下当前位置,输入
+python jyLuaParse.py
+reg文件夹不是金x标记语法我重写了所有reg中的xml语法
+reg文件夹里面的任何东西都会被认为是解析任务,所以不要往里面放多余文件
+输出文件在output中
+没有使用任何异常机制如果报错那就是输入文件和reg不规范

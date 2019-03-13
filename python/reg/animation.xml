@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<workBook name="animation" from="A模型设置.xlsx"  >
+    <sheet name="main" to="animation.lua">
+        <variable name="name" fromCol="模型名" type="string" />
+        <variable name="attackEndIndex" fromCol="攻击动画结束索引" type="int"/>
+        <variable name="defendEndIndex" fromCol="防御动画结束索引" type="int"/>
+        <variable name="standEndIndex" fromCol="站立动画结束索引" type="int"/>
+        <variable name="moveEndIndex" fromCol="移动动画结束索引" type="int"/>
+        <variable name="scale" fromCol="缩放因子" type="float" />
+        <variable name="anchorPoint" fromCol="锚点" type="string" />
+        <startParseCurrentSheet />
+    </sheet>
+    <endCurrentExcel />
+</workBook>
+	
+
+	
+	

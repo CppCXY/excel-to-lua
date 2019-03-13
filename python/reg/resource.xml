@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	
+<workBook name="resource" from="Z资源.xlsx" >
+	<sheet name="main"  to="resource.lua">
+	<variable name="key" fromCol="KEY" type="string" />
+	<variable name="value" fromCol="VALUE" type="string" />
+	<variable name="icon" fromCol="ICON" type="string"/>
+	<variable name="used" fromCol="used" type="blockString" />
+	<startParseCurrentSheet />
+	</sheet>
+	<endCurrentExcel />
+</workBook>
+	
+
+	
+	

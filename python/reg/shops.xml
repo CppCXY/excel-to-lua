@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	
+		<workBook name="shop" from="S商店.xlsx" to="shops.xml">
+			<sheet name="商店"  to="shopName.lua">
+				<variable name="name" fromCol="商店名" type="string" />
+            	<variable name="pic" fromCol="背景图" type="string" />
+            	<variable name="music" fromCol="音乐" type="string" />
+				<startParseCurrentSheet />
+  			</sheet >
+			<sheet name="商品" to="shopItems.lua" >
+				<variable name="belongShop" fromCol="商店名" type="string" />
+				<variable name="id" fromCol="商店物品ID" type="string" />
+				<variable name="name" fromCol="物品名" type="string" />
+				<variable name="limit" fromCol="数量" type="int" />
+			    <extend type="collection" fromIndex="1" endIndex="5" name="need">
+			      <variable name="type"  fromCol="条件[index]类型" type="string" />
+			      <variable name="value" fromCol="条件[index]值" type="string" />
+			    </extend>
+			    <startParseCurrentSheet />
+  			</sheet >
+  		<endCurrentExcel />    
+		</workBook>
+	
+
+	
+	

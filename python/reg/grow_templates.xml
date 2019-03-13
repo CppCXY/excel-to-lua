@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	
+<workBook name="grow_template" from="J角色_成长模板.xlsx"  >
+	<sheet name="main" to="grow_templates.lua" >
+		<variable name="name" fromCol="名称" type="string" />
+		<variable name="hp" fromCol="生命成长" type="int" />
+		<variable name="mp" fromCol="内力成长" type="int" />
+		<variable name="wuxing" fromCol="悟性成长" type="int" />
+		<variable name="shenfa" fromCol="身法成长" type="int" />
+		<variable name="bili" fromCol="臂力成长" type="int" />
+		<variable name="gengu" fromCol="根骨成长" type="int" />
+		<variable name="fuyuan" fromCol="福源成长" type="int" />
+		<variable name="dingli" fromCol="定力成长" type="int" />
+		<variable name="quanzhang" fromCol="拳掌成长" type="int" />
+		<variable name="jianfa" fromCol="剑法成长" type="int" />
+		<variable name="daofa" fromCol="刀法成长" type="int" />
+		<variable name="qimen" fromCol="奇门成长" type="int" />
+		<variable name="wuxue" fromCol="武学常识成长" type="int" />
+		<startParseCurrentSheet />
+	</sheet>
+	<endCurrentExcel />
+</workBook>
+	
+
+	
+	

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	
+<workBook name="role" from="J角色.xlsx" to="roles.xml">
+    <sheet name="main" to="roles.lua">
+    <variable name="key" fromCol="KEY" type="string" />
+    <variable name="wuxue" fromCol="武学" type="int"/>
+    <variable name="animation" fromCol="动画模型" type="string" />
+    <variable name="name" fromCol="名称" type="string" />
+    <variable name="head" fromCol="头像" type="string" />
+    <variable name="hp" fromCol="生命" type="int" />
+    <variable name="mp" fromCol="内力" type="int" />
+    <variable name="wuxing" fromCol="悟性" type="int" />
+    <variable name="shenfa" fromCol="身法" type="int" />
+    <variable name="bili" fromCol="臂力" type="int" />
+    <variable name="gengu" fromCol="根骨" type="int" />
+    <variable name="fuyuan" fromCol="福源" type="int" />
+    <variable name="dingli" fromCol="定力" type="int" />
+    <variable name="quanzhang" fromCol="拳掌" type="int" />
+    <variable name="jianfa" fromCol="剑法" type="int" />
+    <variable name="daofa" fromCol="刀法" type="int" />
+    <variable name="qimen" fromCol="奇门" type="int" />
+    <variable name="level" fromCol="等级" type="int" />
+    <variable name="arena" fromCol="是否不出现在竞技场" type="string" />
+    <variable name="female" fromCol="性别" type="int" />
+    <variable name="talent" fromCol="天赋" type="string" />
+    <variable name="grow_template" fromCol="成长模板" type="string" />			
+    <StringParse name="skills" fromCol="技能" splitSequence="\n." type="collection" >
+        <variable name="name" fromIndex="0" type="string" />
+        <variable name="level" fromIndex="1" type="int" />
+        <variable name="maxlevel" fromIndex="2" type="int" />
+    </StringParse>            
+    <StringParse name="internal_skills" fromCol="内功" splitSequence="\n." type="collection" >
+        <variable name="name" fromIndex="0" type="string" />
+        <variable name="level" fromIndex="1" type="int" />
+        <variable name="equipped" fromIndex="2" type="int" />
+        <variable name="maxlevel" fromIndex="3" type="int" />
+    </StringParse>      
+    <StringList name="special_skills" fromCol="特殊技" splitSequence="\n" type="string" />		
+    <StringList name="items" fromCol="装备" splitSequence="\n" type="string"/>
+    <startParseCurrentSheet />
+    </sheet>
+    <endCurrentExcel />
+</workBook>
+	
+
+	
+	

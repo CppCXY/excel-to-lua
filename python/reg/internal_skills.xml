@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	
+<workBook name="internal_skill" from="J技能_内功.xlsx" >
+	<sheet name="main" to="internal_skill.lua">
+	<variable name="name" fromCol="名称" type="string" />
+	<variable name="info" fromCol="信息" type="string" />
+	<variable name="yin" fromCol="阴" type="int" />
+	<variable name="yang" fromCol="阳" type="int" />
+	<variable name="attack" fromCol="攻击加成" type="double" />
+	<variable name="critical" fromCol="暴击概率加成" type="double" />
+	<variable name="defence" fromCol="防御加成" type="double" />
+	<variable name="hard" fromCol="难度系数" type="int" />
+	<variable name="icon" fromCol="图标" type="string" />
+	<extend   name="trigger" fromIndex="1" endIndex="8" type="collection" >
+		<variable name="name" notNull="true" fromCol="解锁[index]属性" type="string" />
+		<variable name="argvs"  fromCol="解锁[index]值" type="string" />
+		<variable name="lv"  fromCol="解锁[index]等级" type="int" />
+	</extend>
+	<startParseCurrentSheet />
+	</sheet>
+	<endCurrentExcel />
+</workBook>
+	
+
+	
+	

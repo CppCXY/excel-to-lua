@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	
+<workBook name="menpai" from="M门派.xlsx" to="menpai.xml" >
+    <sheet name="main" to="menpai.lua" >
+    <variable name="name" fromCol="名称" type="string" />
+    <variable name="story" fromCol="剧情跳转" type="string" />
+    <variable name="bg" fromCol="背景图" type="string" />
+    <variable name="pic" fromCol="头像图" type="string" />
+    <variable name="shifu" fromCol="师傅" type="string" />
+    <variable name="wuxue" fromCol="武学" type="string" />
+    <variable name="zhuxiu" fromCol="主修" type="string" />
+    <variable name="tedian" fromCol="特点" type="string" />
+    <variable name="info" fromCol="信息" type="blockString" />
+    <startParseCurrentSheet />
+    </sheet>
+    <endCurrentExcel />
+</workBook>
+	
+
+	
+	

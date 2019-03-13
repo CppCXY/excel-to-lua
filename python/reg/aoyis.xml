@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<workBook name="aoyi" from="J技能_奥义.xlsx"  >
+    <sheet name="main" to="aoyi.lua">
+        <variable name="name" fromCol="名称" type="string" />
+        <variable name="addPower" fromCol="增加伤害" type="int"/>
+        <variable name="start" fromCol="起始招式" type="string" />
+        <variable name="level" fromCol="等级" type="int" />
+        <variable name="probability" fromCol="发动概率" type="float" />
+        <variable name="buff" fromCol="BUFF" type="string" />
+        <variable name="animation" fromCol="动画" type="string" />
+        <extend name="condition" fromIndex="1" endIndex="5" type="collection" >
+            <variable name="type" notNull="true" fromCol="条件[index]类型" type="string" />
+            <variable name="value" fromCol="条件[index]值" type="string" />
+            <variable name="level" fromCol="条件[index]等级" type="int" />
+        </extend>
+        <startParseCurrentSheet />
+    </sheet>
+    <endCurrentExcel />
+</workBook>
+	
+
+	
+	

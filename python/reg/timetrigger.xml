@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<workBook name="globalEvent" from="Q全局事件触发.xlsx"  >
+	<sheet name="main" to="globalEvent.lua" >
+	<variable name="name" fromCol="触发剧情" type="string" />
+	<StringParse name="condition" fromCol="条件" splitSequence="\n:" type="collection" >
+		<variable name="type" fromIndex="0" type="string" />
+		<variable name="value" fromIndex="1" type="string" />
+	</StringParse>
+	<variable name="beizhu" fromCol="备注" type="blockString" />
+	<startParseCurrentSheet />
+	</sheet>
+	<endCurrentExcel />
+</workBook>
+
+	
+
+	
+	

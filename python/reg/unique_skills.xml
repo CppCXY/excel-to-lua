@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	
+<workBook name="skill" from="J技能_绝招.xlsx">
+    <sheet name="main"  to="unique_skills.lua">
+        <variable name="belongSkill" fromCol="所属武学" type="string" />
+        <variable name="name" fromCol="名称" type="string" />
+        <variable name="info" fromCol="简介" type="string" />
+        <variable name="hard" fromCol="难度" type="int" />
+        <variable name="covertype" fromCol="覆盖类型" type="int" />
+        <variable name="castsize" fromCol="施展范围" type="int" />
+        <variable name="coversize" fromCol="覆盖范围" type="int" />
+        <variable name="poweradd" fromCol="增加威力" type="int" />
+        <variable name="requirelv" fromCol="解锁等级" type="int" />
+        <variable name="animation" fromCol="动画" type="string" />
+        <variable name="cd" fromCol="冷却" type="int" />
+        <variable name="costball" fromCol="耗怒" type="int" />
+        <variable name="audio" fromCol="音效" type="string" />
+        <variable name="buff" fromCol="BUFF" type="string" />
+        <variable name="icon" fromCol="图标" type="string" />
+        <startParseCurrentSheet />
+    </sheet>
+    <endCurrentExcel />    
+</workBook>
+
+
+	
+	

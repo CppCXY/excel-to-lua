@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	
+<workBook name="tower" from="T天关.xlsx" to="towers.xml" >
+	<sheet name="天关"  to="towers.lua" >
+	<variable name="key" fromCol="天关名称" type="string" />
+	<variable name="desc" fromCol="天关描述" type="string" />
+	<StringParse fromCol="天关条件" type="collection" splitSequence="\n:">
+		<variable name="type" type="string" fromIndex="0"/>
+		<variable name="value" type="string" fromIndex="1"/>
+		<variable name="number" type="int" fromIndex="2"/>
+	</StringParse>
+	<startParseCurrentSheet />
+	</sheet>
+	<sheet name="天关奖励" to="towersItems.lua" >
+		<variable name="name" fromCol="天关名" type="string" />
+		<variable name="key" fromCol="关卡" type="string" />
+		<variable name="index" fromCol="index" type="int" />             
+		<StringParse name="item" fromCol="物品" splitSequence="\n#" type="collection" >
+			<variable name="key" fromIndex="0" type="string" />
+			<variable name="number" fromIndex="1" type="int" />
+			<variable name="probability" fromIndex="2" type="float" />
+		</StringParse>
+	<startParseCurrentSheet />
+	</sheet>
+<endCurrentExcel />
+</workBook>
+	
+
+	
+	

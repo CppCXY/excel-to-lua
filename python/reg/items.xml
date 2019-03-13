@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	
+<workBook name="item" from="W物品.xlsx" to="items.xml" >
+	<sheet name="main"  to="item.lua" >
+	<variable name="name" fromCol="物品名" type="string" />
+	<variable name="desc" fromCol="描述" type="string" />
+	<variable name="pic" fromCol="图片" type="string" />
+	<variable name="type" fromCol="类型" type="int" />
+	<variable name="level" fromCol="物品等级" type="int" />
+	<variable name="price" fromCol="贩卖价格" type="int"/>
+	<variable name="drop" fromCol="是否掉落" type="bool" />
+	<variable name="cd" fromCol="冷却" type="int"/>
+	<variable name="talent" fromCol="天赋" type="string" />
+	<extend   name="trigger" fromIndex="1" endIndex="4" type="collection" >
+		<variable name="name" notNull="true" fromCol="效果ID[index]" type="string" />
+		<variable name="argvs" fromCol="效果值[index]" type="string" />				
+	</extend>
+	<extend name="need" fromIndex="1" endIndex="4" type="collection" >
+		<variable name="name" fromCol="需求ID[index]" type="string" />
+		<variable name="argvs" fromCol="需求值[index]" type="string" />
+	</extend>
+	<startParseCurrentSheet />
+	</sheet>
+	<endCurrentExcel />
+</workBook>
+	
+
+	
+	

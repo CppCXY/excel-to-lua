@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<workBook name="battle" from="Z战斗.xlsx"  >
+	<sheet name="main" to="battle.lua">
+		<variable name="key" fromCol="战斗名" type="string" />
+		<variable name="mapkey" fromCol="战斗场景图" type="string" />
+		<variable name="music" fromCol="音乐" type="string" />
+		<variable name="must" fromCol="必须上场" type="string" />
+		<StringParse name="our_roles" fromCol="我方" splitSequence="\n." type="collection" >
+			<variable name="index" fromIndex="0" type="int" />
+			<variable name="key" fromIndex="1" type="string" />
+			<variable name="x" fromIndex="2" type="int" />
+			<variable name="y" fromIndex="3" type="int" />
+			<variable name="face" fromIndex="4" type="int"/>
+		</StringParse>
+		<StringParse name="your_roles" fromCol="敌方" splitSequence="\n." type="collection" >
+			<variable name="key" fromIndex="0" type="string" />
+			<variable name="x" fromIndex="1" type="int" />
+			<variable name="y" fromIndex="2" type="int" />
+			<variable name="face" fromIndex="3" type="int" />
+		</StringParse>
+		<StringParse name="random_roles" fromCol="随机" splitSequence="\n." type="collection" >
+			<variable name="x" fromIndex="0" type="int" />
+			<variable name="y" fromIndex="1" type="int" />
+			<variable name="face" fromIndex="2" type="int" />
+			<variable name="level" type="int" fromIndex="3" />
+			<variable name="name" type="string" fromIndex="4" />
+			<variable name="animation" type="string" fromIndex="5" />
+			<variable name="boss" type="bool" fromIndex="6" />
+		</StringParse>
+		<startParseCurrentSheet />
+	</sheet>
+	<endCurrentExcel />
+</workBook>
+	
+
+	
+	

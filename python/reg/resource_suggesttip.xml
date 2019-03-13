@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<workBook name="resource" from="Z资源_小贴士.xlsx" >
+	<sheet name="main" to="resource_suggesttips.lua">
+		<variable name="key" fromCol="KEY" type="string" />
+		<variable name="value" fromCol="VALUE" type="string" />
+		<variable name="icon" fromCol="ICON" type="string"/>
+		<startParseCurrentSheet />
+	</sheet>
+	<endCurrentExcel />
+</workBook>
+	
+
+	
+	

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	
+<workBook name="skill" from="J技能_外功.xlsx" to="skills.xml">
+    <sheet name="main"  to="skills.lua">
+        <variable name="name" fromCol="名称" type="string" />
+        <variable name="tiaohe" fromCol="调和" type="int" />
+        <variable name="type" fromCol="类型" type="int" />
+        <variable name="suit" fromCol="适性" type="int" />
+        <variable name="hard" fromCol="难度系数" type="int" />
+        <variable name="info" fromCol="简介" type="string" />
+        <variable name="audio" fromCol="音效" type="string" />
+        <variable name="basepower" fromCol="基础攻击力" type="int" />
+        <variable name="step" fromCol="攻击成长" type="double" />
+        <variable name="animation" fromCol="动画" type="string" />
+        <variable name="cd" fromCol="冷却" type="int" />
+        <variable name="icon" fromCol="图标" type="string" />
+        <variable name="buff" fromCol="BUFF" type="string" />			
+        <extend name="trigger" fromIndex="1" endIndex="8" type="collection" >
+            <variable name="name"  fromCol="解锁[index]属性" type="string" />
+            <variable name="argvs" fromCol="解锁[index]值" type="string" />
+            <variable name="lv" fromCol="解锁[index]等级" type="int" />
+        </extend>
+        <startParseCurrentSheet />
+    </sheet>
+    <endCurrentExcel />    
+</workBook>
+	
+
+	
+	
